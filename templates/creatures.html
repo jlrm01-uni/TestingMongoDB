@@ -10,12 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   </head>
-  <body style="font-family: Playfair Display">
+  <body style="font-size: x-large;font-family: 'Playfair Display'">
     {% include "navigation.html" %}
     <p> These are the creatures. </p>
 
+    <div class="d-flex flex-column">
     {% for creature in all_creatures %}
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="justify-content-center card mb-3" style="max-width: 840px">
           <div class="row g-0">
             <div class="col-md-4">
               <img src="/static/creatures/creature%20({{ creature.image }}).png" class="img-fluid rounded-start" alt="...">
@@ -32,6 +33,7 @@
           </div>
         </div>
     {% endfor %}
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
